@@ -1,5 +1,5 @@
 Feature: User should be able to login with valid credentials
-@regression
+@smoke
  Background:
    Given user is on the login page of web table app
 
