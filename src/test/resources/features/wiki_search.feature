@@ -1,5 +1,5 @@
 Feature: Wikipedia Search Functionality and verifications
-
+@smoke
   Background:
     Given User is on Wikipedia home page
 

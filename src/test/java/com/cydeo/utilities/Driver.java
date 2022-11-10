@@ -11,11 +11,10 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
-
     /*
-       Creating a private constructor, so we are closing access to the object of this class
-       from outside of any classes
-       */
+        Creating a private constructor, so we are closing access to the object of this class
+        from outside of any classes
+        */
     private Driver(){}
 
     /*
@@ -29,9 +28,9 @@ public class Driver {
     Create re-usable utility method which will return same driver instance when we call it.
      */
     public static WebDriver getDriver(){
-
+        String browserType="";
         if(driverPool.get() == null){  // if driver/browser was never opened
-            String browserType="";
+
             if(System.getProperty("BROWSER")==null){
                 browserType = ConfigurationReader.getProperty("browser");
             }else {
@@ -46,7 +45,7 @@ public class Driver {
                 case "remote-chrome":
                     try {
                         // assign your grid server address
-                        String gridAddress = "54.242.25.251"; //54.242.25.251
+                        String gridAddress = "54.242.25.251";
                         URL url = new URL("http://"+ gridAddress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
